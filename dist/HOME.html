@@ -34,10 +34,7 @@
         background-color: #0471ffc7;
         border-color: #0471ffad;
       }
-      .containerM {
-        margin-top: 50px;
-        margin-left: 80px;
-      }
+      
       .card-img-top {
         width: 58px;
         height: 50px;
@@ -64,7 +61,6 @@
         height: 100%;
       }
 
-<<<<<<< HEAD
       #intro {
         background: url("https://s2.best-wallpaper.net/wallpaper/1680x1050/1902/Astronaut-planet-stars-beautiful-space_1680x1050.jpg")
           no-repeat center center fixed;
@@ -72,15 +68,6 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-=======
-      .intro {
-        background: url("bg.jpg")
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-         -o-background-size: cover;
-           background-size: cover;
-        
->>>>>>> 65492934cfcb1854fe1ac6978b621f6d6cdb6d33
       }
 
       .top-nav-collapse {
@@ -90,12 +77,24 @@
         .navbar:not(.top-nav-collapse) {
           background-color: #24355c;
         }
+        .containerM {
+       
+        margin-left: 15px;
+        width: 100%;
+        }
       }
-      @media (min-width: 800px) and (max-width: 850px) {
+      @media (min-width: 800px)   {
         .navbar:not(.top-nav-collapse) {
           background-color: #24355c;
         }
+        .containerM {
+        margin-top: 50px;
+        margin-left: 80px;
       }
+
+      }
+      
+
 
       .navbar {
         display: inline-block;
@@ -428,36 +427,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      function regular_map() {
-        var var_location = new google.maps.LatLng(40.725118, -73.997699);
-
-        var var_mapoptions = {
-          center: var_location,
-          zoom: 14,
-        };
-
-        var var_map = new google.maps.Map(
-          document.getElementById("map-container"),
-          var_mapoptions
-        );
-
-        var var_marker = new google.maps.Marker({
-          position: var_location,
-          map: var_map,
-          title: "New York",
-        });
-      }
-
-      // Initialize maps
-      google.maps.event.addDomListener(window, "load", regular_map);
-
-      // Carousel options
-
-      $(".carousel").carousel({
-        interval: 3000,
-      });
-    </script>
+    
 
     <script>
       var prevScrollpos = window.pageYOffset;
