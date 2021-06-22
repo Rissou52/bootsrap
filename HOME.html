@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+
+    <style>
+      .selector-for-some-widget {
+        box-sizing: content-box;
+      }
+      .dropdown-items {
+        color: aliceblue;
+      }
+      .btn-outline-success {
+        color: #fff;
+
+        background-color: #0471ff8a;
+        border-color: #0471ff6e;
+      }
+
+      .btn-outline-success:hover {
+        color: #fff;
+        background-color: #0471ffc7;
+        border-color: #0471ffad;
+      }
+      .containerM {
+        margin-top: 50px;
+        margin-left: 80px;
+      }
+      .card-img-top {
+        width: 58px;
+        height: 50px;
+        position: absolute;
+        left: 190px;
+        top: -25px;
+        z-index: 100;
+      }
+      .card-img-top2 {
+        width: 45px;
+        height: 50px;
+        position: absolute;
+        left: 190px;
+        top: -25px;
+        z-index: 100;
+      }
+      .accordion {
+        margin-top: 50px;
+      }
+      html,
+      body,
+      header,
+      #intro {
+        height: 100%;
+      }
+
+      #intro {
+        background: url("https://s2.best-wallpaper.net/wallpaper/1680x1050/1902/Astronaut-planet-stars-beautiful-space_1680x1050.jpg")
+          no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .top-nav-collapse {
+        background-color: #24355c;
+      }
+      @media (max-width: 768px) {
+        .navbar:not(.top-nav-collapse) {
+          background-color: #24355c;
+        }
+      }
+      @media (min-width: 800px) and (max-width: 850px) {
+        .navbar:not(.top-nav-collapse) {
+          background-color: #24355c;
+        }
+      }
+
+      .navbar {
+        display: inline-block;
+
+        overflow: hidden;
+        min-height: 32px;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+      }
+
+      .col-md-10 {
+        margin: 200px;
+      }
+
+      .card {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+
+      /* On mouse-over, add a deeper shadow */
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      /* Add some padding inside the card container */
+      .container {
+        padding: 2px 16px;
+      }
+      .containerM{
+      width: 100%;
+    }
+
+      .elegantshd {
+        text-shadow: 10px 10px 15px black;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+            alt=""
+            width="30"
+            height="24"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Projets </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Documentation HTML/CSS
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">HTML</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">CSS</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                JavaScript
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Vue-JS</a></li>
+                <li><a class="dropdown-item" href="#">React</a></li>
+                <li><a class="dropdown-item" href="#">Angular</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Laravel</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">PHP</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--/.Navbar-->
+
+    <!--welcom-->
+    <header>
+      <div id="intro" class="view">
+        <div class="mask rgba-black-strong">
+          <div
+            class="
+              container-fluid
+              d-flex
+              align-items-center
+              justify-content-center
+              h-100
+            "
+          >
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-md-10">
+                <!-- Heading -->
+                <h1 class="elegantshd" style="color: white">Welcome</h1>
+
+                <!-- Divider -->
+                <hr class="hr-light" style="color: white" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Mask-->
+    </header>
+    <!--Welcom-->
+
+    <!--Main Navigation-->
+    <div class="containerM">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://consultant-webdesigner.fr/wp-content/uploads/2020/04/bootstrap_4-icon.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap</h5>
+              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
+              <p class="card-text">
+                Bootstrap is a free and open-source CSS framework directed at
+                responsive, mobile-first front-end web development. It contains
+                CSS- and (optionally) JavaScript-based design templates for
+                typography, forms, buttons, navigation, and other interface
+                components.
+              </p>
+              <a href="bootstrap.html" class="card-link"> Voir plus </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+              class="card-img-top2"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
+              <p class="card-text">
+                Cascading Style Sheets (CSS) is a style sheet language used for
+                describing the presentation of a document written in a markup
+                language such as HTML.[1] CSS is a cornerstone technology of the
+                World Wide Web, alongside HTML and JavaScript.[2]
+              </p>
+              <a href="HTML.html" class="card-link"> Voir plus </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://www2.skillsoft.com/wp-content/uploads/2018/01/Javascript_badge.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">JAVASCRIPT</h5>
+              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
+              <p class="card-text">
+                JavaScript , often abbreviated as JS, is a programming language
+                that conforms to the ECMAScript specification.[9] JavaScript is
+                high-level, often just-in-time compiled, and multi-paradigm. It
+                has curly-bracket syntax, dynamic typing, prototype-based
+                object-orientation, and first-class functions.
+              </p>
+              <a href="javascript.html" class="card-link"> Voir plus </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Main Navigation-->
+
+    <!--Main Projets 2021-->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne"
+            aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne"
+          >
+            JUIN 2021
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="panelsStayOpen-headingOne"
+        >
+          <div class="accordion-body">
+            <strong> Voici ma liste de projet pour juin 2021</strong>
+            <ol>
+              <li>Tableaux chiens</li>
+              <li>Exemple Google</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo"
+          >
+            JULLET 2021
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingTwo"
+        >
+          <div class="accordion-body">
+            <strong> Voici ma liste de projet pour juillet 2021</strong>
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree"
+          >
+            AOUT 2021
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingThree"
+        >
+          <div class="accordion-body">
+            <strong> Voici ma liste de projet pour Aout 2021</strong>
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Main Projets 2021-->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function regular_map() {
+        var var_location = new google.maps.LatLng(40.725118, -73.997699);
+
+        var var_mapoptions = {
+          center: var_location,
+          zoom: 14,
+        };
+
+        var var_map = new google.maps.Map(
+          document.getElementById("map-container"),
+          var_mapoptions
+        );
+
+        var var_marker = new google.maps.Marker({
+          position: var_location,
+          map: var_map,
+          title: "New York",
+        });
+      }
+
+      // Initialize maps
+      google.maps.event.addDomListener(window, "load", regular_map);
+
+      // Carousel options
+
+      $(".carousel").carousel({
+        interval: 3000,
+      });
+    </script>
+
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
+  </body>
+</html>
