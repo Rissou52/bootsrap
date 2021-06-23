@@ -20,7 +20,7 @@
         box-sizing: content-box;
       }
       .dropdown-items {
-        color: "aliceblue";
+        color: aliceblue;
       }
       .btn-outline-success {
         color: #fff;
@@ -43,6 +43,15 @@
         top: -25px;
         z-index: 100;
       }
+      .cardword {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 190px;
+        top: -25px;
+        z-index: 100;
+      }
+
       .card-img-top2 {
         width: 45px;
         height: 50px;
@@ -77,25 +86,11 @@
         .navbar:not(.top-nav-collapse) {
           background-color: #24355c;
         }
-        
-        .container {  margin-left: 20px; padding-left: 0px;width: 312px;margin-left: 0px; }
         .containerM {
        
         margin-left: 15px;
-        width: auto%;
+        width: 100%;
         }
-        
-        .card{ 
-        margin-rigth:5px;
-        width:90%:
-          
-        
-        }
-        
-        .col-sm-4 {  margin-rigth:5px;
-         width:90%:
-          
-          margin-bottom: 50px;  }
       }
       @media (min-width: 800px)   {
         .navbar:not(.top-nav-collapse) {
@@ -128,6 +123,7 @@
         /* Add shadows to create the "card" effect */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
+        margin-bottom: 60px;
       }
 
       /* On mouse-over, add a deeper shadow */
@@ -140,19 +136,23 @@
         padding: 2px 16px;
       }
       .containerM{
+        margin-top: 120px;
       width: 100%;
     }
 
       .elegantshd {
         text-shadow: 10px 10px 15px black;
       }
+      .navbar{
+        margin-bottom: 70px;
+      }
+      
     </style>
   </head>
   <body>
     <!--Navbar-->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-       
-       <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
             src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
@@ -194,7 +194,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Documentation HTML/CSS
+                Documentation 
               </a>
               <ul
                 class="dropdown-menu"
@@ -218,7 +218,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                JavaScript
+                Links
               </a>
               <ul
                 class="dropdown-menu"
@@ -253,37 +253,78 @@
     </nav>
     <!--/.Navbar-->
 
-    <!--welcom-->
-    <header>
-      <div id="intro" class="view">
-        <div class="mask rgba-black-strong">
-          <div
-            class="
-              container-fluid
-              d-flex
-              align-items-center
-              justify-content-center
-              h-100
-            "
-          >
-            <div class="row d-flex justify-content-center text-center">
-              <div class="col-md-10">
-                <!-- Heading -->
-                <h1 class="elegantshd" style="color: white">Welcome</h1>
+   
 
-                <!-- Divider -->
-                <hr class="hr-light" style="color: white" />
-              </div>
+    <!--Main Navigation-->
+    <div class="containerM">
+      
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img
+              src="https://fr.vuejs.org/images/logo.png"
+              class="cardword"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Vue-js</h5>
+              <h6 class="card-subtitle mb-2 text-muted">23/06/2021</h6>
+              <ul>
+                <li>
+                    <p class="card-text">
+                      Vue-js  - Cli
+                     </p>
+                </li>
+               </ul>
+              <a href="bootstrap.html" class="card-link"> Voir plus </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png"
+              class="card-img-top2"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title"> Laravel </h5>
+              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
+              <ul>
+                <li>
+                    <p class="card-text">
+                    On Build
+                     </p>
+                </li>
+               </ul> 
+              <a href="HTML.html" class="card-link"> Voir plus </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://img.icons8.com/color/480/mongodb.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">MongoDB</h5>
+              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
+              <ul>
+                <li>
+                    <p class="card-text">
+                    On Build
+                     </p>
+                </li>
+               </ul>
+              <a href="javascript.html" class="card-link"> Voir plus </a>
             </div>
           </div>
         </div>
       </div>
-      <!--/.Mask-->
-    </header>
-    <!--Welcom-->
 
-    <!--Main Navigation-->
-    <div class="containerM">
       <div class="row">
         <div class="col-sm-4">
           <div class="card" style="width: 18rem">
@@ -295,13 +336,31 @@
             <div class="card-body">
               <h5 class="card-title">Bootstrap</h5>
               <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
-              <p class="card-text">
-                Bootstrap is a free and open-source CSS framework directed at
-                responsive, mobile-first front-end web development. It contains
-                CSS- and (optionally) JavaScript-based design templates for
-                typography, forms, buttons, navigation, and other interface
-                components.
-              </p>
+               <ul>
+                <li>  
+                  <p class="card-text">
+                    Introduction 
+                  </p>
+                 </li>
+
+                <li>  
+                  <p class="card-text">
+                    Installation 
+                  </p>
+                 </li>
+                 <li>  
+                   <p class="card-text">
+                     Localhost
+                   </p>
+                  </li>
+                  <li>  
+                   <p class="card-text">
+                    Start with  Navbar 
+                   </p>
+                 </li>
+ 
+
+               </ul>
               <a href="bootstrap.html" class="card-link"> Voir plus </a>
             </div>
           </div>
@@ -309,44 +368,56 @@
         <div class="col-sm-4">
           <div class="card" style="width: 18rem">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-              class="card-img-top2"
-              alt=""
-            />
-            <div class="card-body">
-              <h5 class="card-title">CSS</h5>
-              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
-              <p class="card-text">
-                Cascading Style Sheets (CSS) is a style sheet language used for
-                describing the presentation of a document written in a markup
-                language such as HTML.[1] CSS is a cornerstone technology of the
-                World Wide Web, alongside HTML and JavaScript.[2]
-              </p>
-              <a href="HTML.html" class="card-link"> Voir plus </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://www2.skillsoft.com/wp-content/uploads/2018/01/Javascript_badge.png"
+              src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png"
               class="card-img-top"
               alt=""
             />
             <div class="card-body">
               <h5 class="card-title">JAVASCRIPT</h5>
               <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
-              <p class="card-text">
-                JavaScript , often abbreviated as JS, is a programming language
-                that conforms to the ECMAScript specification.[9] JavaScript is
-                high-level, often just-in-time compiled, and multi-paradigm. It
-                has curly-bracket syntax, dynamic typing, prototype-based
-                object-orientation, and first-class functions.
-              </p>
+               <ul> 
+                 <li>  
+                  <p class="card-text"> introduction</p>
+                  <ul>
+                    <li> Variables </li>
+                    <li> Functions</li>
+                  </ul>
+                 </li>
+                 <li>  
+                  <p class="card-text">
+                    Build Guess number game 
+                  </p>
+                 </li>
+
+               </ul>
               <a href="javascript.html" class="card-link"> Voir plus </a>
             </div>
           </div>
         </div>
+
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://hellowebtunisie.com/wp-content/uploads/2017/05/WordPress-Logo-PNG-File.png"
+              class="cardword"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title"> Wordpress </h5>
+              <h6 class="card-subtitle mb-2 text-muted">21/06/2021</h6>
+               <ul>
+                <li>
+                    <p class="card-text">
+                    On Build
+                     </p>
+                </li>
+               </ul>
+
+              <a href="HTML.html" class="card-link"> Voir plus </a>
+            </div>
+          </div>
+        </div>
+       
       </div>
     </div>
     <!--Main Navigation-->
