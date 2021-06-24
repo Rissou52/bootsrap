@@ -775,6 +775,13 @@ margin-top: 90px;
           } else if (userGuess > randomNumber) {
             lowOrHi.textContent = "Last guess was too high!";
           }
+
+          if ((userGuess-  randomNumber) < 10) {
+            lowOrHi.textContent = "Presque !!! ";
+          } else if ((randomNumber-userGuess ) < 10) {
+            lowOrHi.textContent = "presque !!! ";
+          }
+        
         }
     
         guessCount++;
