@@ -772,23 +772,21 @@ margin-top: 90px;
           lastResult.style.backgroundColor = "#dc3545";
           if (userGuess < randomNumber) {
             lowOrHi.textContent = "Last guess was too low!";
-          
-            if ((randomNumber - userGuess) < 10) {
-              lowOrHi.textContent = "Presque !!! ";
-            }
-
-
           } else if (userGuess > randomNumber) {
-           lowOrHi.textContent = "Last guess was too high!";
+           lowOrHi.textContent = "Last guess was too high!";            
+          }
+       
           
-
-            if ((user Guess - randomNumber) < 10) {
+            if ((randomNumber - userGuess) < 10) and   (userGuess < randomNumber)  {
               lowOrHi.textContent = "Presque !!! ";
             }
 
-         }
+            if ((user Guess - randomNumber) < 10) and  (userGuess > randomNumber)  {
+              lowOrHi.textContent = "Presque !!! ";
+            }
 
-      } 
+
+      
           
         
         }
